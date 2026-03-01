@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
-                        : const Color.fromARGB(255, 245, 244, 244),
+                        :  const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Column(
