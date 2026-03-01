@@ -78,31 +78,37 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           currentScreen,
-          if(showButton=='show') Container(
-            margin: EdgeInsets.only(top: 80, left: 20),
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 248, 247, 247),
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: const Color.fromARGB(192, 0, 0, 0),
-                  blurRadius: 18,
-                  spreadRadius: 3,
-                ),
-              ],
-            ),
-
-            child: IconButton(
-              icon: HugeIcon(
-                icon: HugeIcons.strokeRoundedArrowLeft02,
-                size: 24,
-                color: const Color.fromARGB(255, 13, 75, 126),
+          if (showButton == 'show')
+            Container(
+              margin: EdgeInsets.only(top: 80, left: 20),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 248, 247, 247),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromARGB(192, 0, 0, 0),
+                    blurRadius: 18,
+                    spreadRadius: 3,
+                  ),
+                ],
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+
+              child: IconButton(
+                icon: HugeIcon(
+                  icon: HugeIcons.strokeRoundedArrowLeft02,
+                  size: 24,
+                  color: const Color.fromARGB(255, 13, 75, 126),
+                ),
+                onPressed: () {
+                  setState(() {
+                    checkvalue=true;
+                    changeScreen(true);
+                    
+                  });
+                  
+                },
+              ),
             ),
-          ),
         ],
       ),
       bottomNavigationBar: Container(
