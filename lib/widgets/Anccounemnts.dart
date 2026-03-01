@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sudan/widgets/Announcements_widget.dart';
+
+class AnnouncementsPage extends StatelessWidget {
+  const AnnouncementsPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.only(top: 150),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 235, 232, 232),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Announcements",
+                          style: GoogleFonts.ptSans(
+                            fontSize: 28,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                      ],
+                    ),
+
+                    Container(
+                      width: double.infinity,
+
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                        children: [
+                          AnnouncementsWidget(),
+                          AnnouncementsWidget(),
+                          AnnouncementsWidget(),
+                          AnnouncementsWidget(),
+                          AnnouncementsWidget(),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
