@@ -104,9 +104,17 @@ class _HomePageState extends State<HomePage> {
                 ),
                 onPressed: () {
                   setState(() {
+<<<<<<< HEAD
                     checkvalue = true;
                     changeScreen(true);
                   });
+=======
+                    checkvalue=true;
+                    changeScreen(true);
+                    
+                  });
+                  
+>>>>>>> 43e32a7e8b7a8449f1ec4129d6ab136e0e2b9f33
                 },
               ),
             ),
@@ -145,7 +153,11 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
+<<<<<<< HEAD
                         : const Color.fromARGB(255, 255, 255, 255),
+=======
+                        :  const Color.fromARGB(255, 255, 255, 255),
+>>>>>>> 43e32a7e8b7a8449f1ec4129d6ab136e0e2b9f33
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Column(
