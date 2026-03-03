@@ -22,6 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "signin": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "Checkin": MessageLookupByLibrary.simpleMessage("وقت الحضور"),
+    "Checkout": MessageLookupByLibrary.simpleMessage("وقت الانصراف"),
+    "Development": MessageLookupByLibrary.simpleMessage("فريق التطوير"),
+    "Emergency": MessageLookupByLibrary.simpleMessage("الرصيد الطارئ"),
+    "Hello": MessageLookupByLibrary.simpleMessage("مرحباً علي!"),
+    "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
+    "Regular": MessageLookupByLibrary.simpleMessage("الرصيد العادي"),
+    "announcemnts": MessageLookupByLibrary.simpleMessage("الإعلانات"),
+    "checkout": MessageLookupByLibrary.simpleMessage("تسجيل الانصراف"),
+    "on_time": MessageLookupByLibrary.simpleMessage("في الموعد"),
+    "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
+    "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
   };
 }

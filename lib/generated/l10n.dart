@@ -54,9 +54,84 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Language`
+  String get Language {
+    return Intl.message('Language', name: 'Language', desc: '', args: []);
+  }
+
   /// `Sign in`
   String get signin {
     return Intl.message('Sign in', name: 'signin', desc: '', args: []);
+  }
+
+  /// `Hello Ali!`
+  String get Hello {
+    return Intl.message('Hello Ali!', name: 'Hello', desc: '', args: []);
+  }
+
+  /// `Development Team`
+  String get Development {
+    return Intl.message(
+      'Development Team',
+      name: 'Development',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check-in time`
+  String get Checkin {
+    return Intl.message('Check-in time', name: 'Checkin', desc: '', args: []);
+  }
+
+  /// `Check-out time`
+  String get Checkout {
+    return Intl.message('Check-out time', name: 'Checkout', desc: '', args: []);
+  }
+
+  /// `on-time`
+  String get on_time {
+    return Intl.message('on-time', name: 'on_time', desc: '', args: []);
+  }
+
+  /// `Pending`
+  String get pending {
+    return Intl.message('Pending', name: 'pending', desc: '', args: []);
+  }
+
+  /// `Check Out`
+  String get checkout {
+    return Intl.message('Check Out', name: 'checkout', desc: '', args: []);
+  }
+
+  /// `Regular Balance`
+  String get Regular {
+    return Intl.message('Regular Balance', name: 'Regular', desc: '', args: []);
+  }
+
+  /// `Emergency Balance`
+  String get Emergency {
+    return Intl.message(
+      'Emergency Balance',
+      name: 'Emergency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get Home {
+    return Intl.message('Home', name: 'Home', desc: '', args: []);
+  }
+
+  /// `Announcemnts`
+  String get announcemnts {
+    return Intl.message(
+      'Announcemnts',
+      name: 'announcemnts',
+      desc: '',
+      args: [],
+    );
   }
 }
 
