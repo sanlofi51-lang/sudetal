@@ -5,11 +5,16 @@ import 'package:sudan/generated/l10n.dart';
 import 'package:sudan/widgets/alert.dart';
 import 'package:sudan/widgets/balance.dart';
 import 'package:sudan/widgets/card_rec.dart';
+import 'package:intl/intl.dart';
 
 class Homestander extends StatelessWidget {
   const Homestander({super.key});
   @override
   Widget build(context) {
+    bool isArabic() {
+      return Intl.getCurrentLocale() == "ar";
+    }
+
     void checkOut() {
       showDialog(
         barrierDismissible: false,
@@ -24,7 +29,6 @@ class Homestander extends StatelessWidget {
       padding: const EdgeInsets.only(top: 140),
 
       child: SingleChildScrollView(
-       
         physics: ClampingScrollPhysics(),
         child: Column(
           children: [
@@ -83,7 +87,9 @@ class Homestander extends StatelessWidget {
                         ),
                         child: IconButton(
                           icon: HugeIcon(
-                            icon: HugeIcons.strokeRoundedLogoutCircle02,
+                            icon: !isArabic()
+                                ? HugeIcons.strokeRoundedLogoutCircle02
+                                : HugeIcons.strokeRoundedLoginCircle02,
                             size: 30,
                             color: const Color.fromARGB(255, 13, 75, 126),
                           ),

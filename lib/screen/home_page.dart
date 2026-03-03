@@ -6,6 +6,7 @@ import 'package:sudan/widgets/Anccounemnts.dart';
 
 import 'package:hugeicons/hugeicons.dart';
 import 'package:sudan/widgets/homestander.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,6 +16,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isArabic() {
+    return Intl.getCurrentLocale() == "en";
+  }
+
   var checkvalue = true;
   String showButton = '';
   Widget currentScreen = Homestander();
@@ -64,12 +69,10 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 Container(
-                 
                   padding: EdgeInsets.only(bottom: 150),
                   child: Image.asset(
                     alignment: AlignmentGeometry.topCenter,
                     "assets/images/studal.png",
-                    
                   ),
                 ),
               ],
@@ -78,7 +81,7 @@ class _HomePageState extends State<HomePage> {
           currentScreen,
           if (showButton == 'show')
             Container(
-              margin: EdgeInsets.only(top: 80, left: 20),
+              margin: EdgeInsets.only(top: 80, left: 20,right: 20),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 248, 247, 247),
                 shape: BoxShape.circle,
@@ -93,7 +96,9 @@ class _HomePageState extends State<HomePage> {
 
               child: IconButton(
                 icon: HugeIcon(
-                  icon: HugeIcons.strokeRoundedArrowLeft02,
+                  icon: isArabic()
+                      ? HugeIcons.strokeRoundedArrowLeft02
+                      : HugeIcons.strokeRoundedArrowRight02,
                   size: 24,
                   color: const Color.fromARGB(255, 13, 75, 126),
                 ),
