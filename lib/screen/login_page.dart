@@ -56,14 +56,14 @@ class _LoginPageState extends State<LoginPage> {
 
                         if (check) {
                           localeProvider.changeLocale('ar');
-                          setState(() {
+                         
                             _flagCurrent = 'assets/images/sudanflag.png';
-                          });
+                        
                         } else {
                           localeProvider.changeLocale('en');
-                          setState(() {
+                        
                             _flagCurrent = 'assets/images/flag2.png';
-                          });
+                        
                         }
 
                         setState(() {
