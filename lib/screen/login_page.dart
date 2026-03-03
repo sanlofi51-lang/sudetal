@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sudan/generated/l10n.dart';
+
 import 'package:sudan/screen/home_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,13 +44,20 @@ class LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Image.asset(
-                        "assets/images/arabic.png",
-
-                        fit: BoxFit.cover,
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "العربية",
+                        style: GoogleFonts.openSans(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
+                    ),
+                    Image.asset(
+                      'assets/images/sudanflag.png',
+                      height: 32,
+                      width: 32,
                     ),
                   ],
                 ),
@@ -107,9 +123,11 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: const Text(
-                      "Sign In",
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    child: Text(  S.of(context).signin,
+                      style: GoogleFonts.openSans(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

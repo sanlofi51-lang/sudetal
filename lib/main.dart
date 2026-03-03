@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'generated/l10n.dart';
 import 'package:sudan/screen/login_page.dart';
-
-
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -25,8 +23,16 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale("en"),
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       theme: theme,
-      home:LoginPage()
+      home: LoginPage(),
     );
   }
 }
