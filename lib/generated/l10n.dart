@@ -133,6 +133,71 @@ class S {
       args: [],
     );
   }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
+  }
+
+  /// `Confirm`
+  String get Confirm {
+    return Intl.message('Confirm', name: 'Confirm', desc: '', args: []);
+  }
+
+  /// `Out of Boundaries!`
+  String get outbounders {
+    return Intl.message(
+      'Out of Boundaries!',
+      name: 'outbounders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add justification for your current location`
+  String get currentlocationtext {
+    return Intl.message(
+      'Add justification for your current location',
+      name: 'currentlocationtext',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incomplete working hours !`
+  String get alert {
+    return Intl.message(
+      'Incomplete working hours !',
+      name: 'alert',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write your justification here ... `
+  String get justification {
+    return Intl.message(
+      'Write your justification here ... ',
+      name: 'justification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Early Checkout!`
+  String get Early {
+    return Intl.message('Early Checkout!', name: 'Early', desc: '', args: []);
+  }
+
+  /// `Incomplete working hours !`
+  String get alerthours {
+    return Intl.message(
+      'Incomplete working hours !',
+      name: 'alerthours',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

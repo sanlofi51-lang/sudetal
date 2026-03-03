@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sudan/generated/l10n.dart';
 
 import 'package:sudan/widgets/Anccounemnts.dart';
 
 import 'package:sudan/widgets/home.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:provider/provider.dart';
+import 'package:sudan/provider/locael_prov.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -101,11 +104,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 onPressed: () {
                   setState(() {
-                    checkvalue=true;
+                    checkvalue = true;
                     changeScreen(true);
-                    
                   });
-                  
                 },
               ),
             ),
@@ -144,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
-                        :  const Color.fromARGB(255, 255, 255, 255),
+                        : const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Column(
@@ -158,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        "Home",
+                        S.of(context).Home,
                         style: GoogleFonts.openSans(
                           color: checkvalue ? Colors.white : Colors.grey,
                         ),
@@ -209,7 +210,7 @@ class _HomePageState extends State<HomePage> {
 
                       SizedBox(height: 4),
                       Text(
-                        "Announcemnts",
+                        S.of(context).announcemnts,
                         style: GoogleFonts.openSans(
                           color: !checkvalue ? Colors.white : Colors.grey,
                         ),

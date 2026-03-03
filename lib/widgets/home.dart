@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:sudan/generated/l10n.dart';
 import 'package:sudan/widgets/alert.dart';
 import 'package:sudan/widgets/balance.dart';
 import 'package:sudan/widgets/card_rec.dart';
@@ -20,7 +21,7 @@ class _HomeState extends State<Home> {
         barrierDismissible: false,
 
         context: context,
-        builder: (ctx) => AlertScreen(early: true),
+        builder: (ctx) => AlertScreen(early: false),
       );
     }
 
@@ -51,14 +52,14 @@ class _HomeState extends State<Home> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Hello Ali!",
+                              S.of(context).Hello,
                               style: GoogleFonts.ptSans(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
-                              "Development Team",
+                              S.of(context).Development,
                               style: GoogleFonts.ptSans(
                                 fontSize: 12,
 
@@ -107,16 +108,16 @@ class _HomeState extends State<Home> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             CardRec(
-                              title: "Check-in time",
+                              title: S.of(context).Checkin,
                               time: "9:00 AM",
-                              status: "On-time",
+                              status: S.of(context).on_time,
                               color: Colors.green,
                             ),
                             SizedBox(width: 10),
                             CardRec(
-                              title: "Check-out time",
+                              title: S.of(context).Checkout,
                               time: "Not yet",
-                              status: "Pending",
+                              status: S.of(context).pending,
                               color: Colors.orange,
                             ),
                           ],
@@ -146,10 +147,10 @@ class _HomeState extends State<Home> {
                                 borderRadius: BorderRadius.circular(12),
                               ),
                             ),
-                            child: const Text(
-                              "Check Out",
-                              style: TextStyle(
-                                color: Color(0xff1D23D3),
+                            child: Text(
+                              S.of(context).checkout,
+                              style: const TextStyle(
+                                color: Color.fromARGB(255, 29, 35, 211),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -163,9 +164,9 @@ class _HomeState extends State<Home> {
                     padding: EdgeInsetsGeometry.all(1),
                     child: Row(
                       children: [
-                        Balance(title: "Regular Balance ", value: 11),
+                        Balance(title: S.of(context).Regular, value: 11),
                         SizedBox(width: 10),
-                        Balance(title: "Emergency Balance ", value: 5),
+                        Balance(title: S.of(context).Emergency, value: 5),
                       ],
                     ),
                   ),

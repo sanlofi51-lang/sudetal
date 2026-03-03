@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sudan/generated/l10n.dart';
 import 'package:sudan/widgets/Announcements_widget.dart';
 
 class AnnouncementsPage extends StatelessWidget {
@@ -25,7 +26,7 @@ class AnnouncementsPage extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "Announcements",
+                          S.of(context).announcemnts,
                           style: GoogleFonts.ptSans(
                             fontSize: 28,
                             fontWeight: FontWeight.w700,

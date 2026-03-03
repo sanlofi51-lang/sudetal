@@ -22,17 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "Checkin": MessageLookupByLibrary.simpleMessage("وقت الحضور"),
-    "Checkout": MessageLookupByLibrary.simpleMessage("وقت الانصراف"),
+    "Checkin": MessageLookupByLibrary.simpleMessage("وقت تسجيل الحضور"),
+    "Checkout": MessageLookupByLibrary.simpleMessage("وقت تسجيل الانصراف"),
+    "Confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
     "Development": MessageLookupByLibrary.simpleMessage("فريق التطوير"),
+    "Early": MessageLookupByLibrary.simpleMessage("انصراف مبكر!"),
     "Emergency": MessageLookupByLibrary.simpleMessage("الرصيد الطارئ"),
     "Hello": MessageLookupByLibrary.simpleMessage("مرحباً علي!"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
     "Regular": MessageLookupByLibrary.simpleMessage("الرصيد العادي"),
+    "alert": MessageLookupByLibrary.simpleMessage("ساعات العمل غير مكتملة!"),
+    "alerthours": MessageLookupByLibrary.simpleMessage(
+      "ساعات العمل غير مكتملة!",
+    ),
     "announcemnts": MessageLookupByLibrary.simpleMessage("الإعلانات"),
+    "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "checkout": MessageLookupByLibrary.simpleMessage("تسجيل الانصراف"),
+    "currentlocationtext": MessageLookupByLibrary.simpleMessage(
+      "يرجى إضافة مبرر لموقعك الحالي",
+    ),
+    "justification": MessageLookupByLibrary.simpleMessage("اكتب المبرر هنا..."),
     "on_time": MessageLookupByLibrary.simpleMessage("في الموعد"),
+    "outbounders": MessageLookupByLibrary.simpleMessage("خارج النطاق المسموح"),
     "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
     "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
   };

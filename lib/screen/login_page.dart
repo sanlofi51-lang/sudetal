@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:sudan/generated/l10n.dart';
+import 'package:sudan/provider/locael_prov.dart';
 
 import 'package:sudan/screen/home_page.dart';
 
@@ -12,7 +14,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  
+  bool check = true;
+  String _flagCurrent = 'assets/images/flag2.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,12 +45,33 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        final localeProvider = Provider.of<LocaleProvider>(
+                          context,
+                          listen: false,
+                        );
+
+                        if (check) {
+                          localeProvider.changeLocale('ar');
+                          setState(() {
+                            _flagCurrent = 'assets/images/sudanflag.png';
+                          });
+                        } else {
+                          localeProvider.changeLocale('en');
+                          setState(() {
+                            _flagCurrent = 'assets/images/flag2.png';
+                          });
+                        }
+
+                        setState(() {
+                          check = !check;
+                        });
+                      },
                       child: Text(
-                        "العربية",
+                        S.of(context).Language,
                         style: GoogleFonts.openSans(
                           color: Colors.white,
                           fontSize: 20,
@@ -55,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Image.asset(
-                      'assets/images/sudanflag.png',
+                      _flagCurrent,
                       height: 32,
                       width: 32,
                     ),
@@ -123,7 +147,8 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: Text(  S.of(context).signin,
+                    child: Text(
+                      S.of(context).signin,
                       style: GoogleFonts.openSans(
                         fontSize: 18,
                         color: Colors.white,

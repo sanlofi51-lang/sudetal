@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:sudan/generated/l10n.dart';
 
 class AlertScreen extends StatelessWidget {
   AlertScreen({super.key, required this.early});
@@ -25,12 +26,12 @@ class AlertScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20,),
 
-                //  margin: EdgeInsets.only(top: 20, left: 20),
+               
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      early ? "Out of Boundaries!" : 'Early Checkout!',
+                      early ? S.of(context).outbounders: S.of(context).alerthours,
                       style: GoogleFonts.ptSans(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -38,7 +39,7 @@ class AlertScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 3),
                    if(early) Text(
-                         "Add justification for your current location.",
+                         S.of(context).currentlocationtext,
                       style: GoogleFonts.openSans(
                         fontSize: 14,
 
@@ -52,14 +53,14 @@ class AlertScreen extends StatelessWidget {
                         maxLines: 4,
 
                         decoration: InputDecoration(
-                          hintText: "Write your justification here...",
+                          hintText: S.of(context).currentlocationtext,
                           filled: true,
 
                           fillColor: Colors.white,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             gapPadding: 12,
-                            //borderSide: BorderSide.,
+                            
                           ),
                         ),
                       ),
@@ -74,7 +75,7 @@ class AlertScreen extends StatelessWidget {
                         ),
                         SizedBox(width: 3),
                         Text(
-                          "Incomplete working hours !",
+                          S.of(context).alerthours,
                           style: GoogleFonts.openSans(
                             fontSize: 14,
 
@@ -106,8 +107,8 @@ class AlertScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text(
-                          "Confirm",
+                        child:  Text(
+                          S.of(context).Confirm,
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         ),
                       ),
@@ -129,8 +130,8 @@ class AlertScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text(
-                          "Cancel",
+                        child:  Text(
+                          S.of(context).cancel,
                           style: TextStyle(
                             color: Color(0xff1D23D3),
                             fontWeight: FontWeight.bold,

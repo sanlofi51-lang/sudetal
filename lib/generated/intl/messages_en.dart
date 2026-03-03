@@ -24,15 +24,29 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Checkin": MessageLookupByLibrary.simpleMessage("Check-in time"),
     "Checkout": MessageLookupByLibrary.simpleMessage("Check-out time"),
+    "Confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "Development": MessageLookupByLibrary.simpleMessage("Development Team"),
+    "Early": MessageLookupByLibrary.simpleMessage("Early Checkout!"),
     "Emergency": MessageLookupByLibrary.simpleMessage("Emergency Balance"),
     "Hello": MessageLookupByLibrary.simpleMessage("Hello Ali!"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
     "Language": MessageLookupByLibrary.simpleMessage("Language"),
     "Regular": MessageLookupByLibrary.simpleMessage("Regular Balance"),
+    "alert": MessageLookupByLibrary.simpleMessage("Incomplete working hours !"),
+    "alerthours": MessageLookupByLibrary.simpleMessage(
+      "Incomplete working hours !",
+    ),
     "announcemnts": MessageLookupByLibrary.simpleMessage("Announcemnts"),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "checkout": MessageLookupByLibrary.simpleMessage("Check Out"),
+    "currentlocationtext": MessageLookupByLibrary.simpleMessage(
+      "Add justification for your current location",
+    ),
+    "justification": MessageLookupByLibrary.simpleMessage(
+      "Write your justification here ... ",
+    ),
     "on_time": MessageLookupByLibrary.simpleMessage("on-time"),
+    "outbounders": MessageLookupByLibrary.simpleMessage("Out of Boundaries!"),
     "pending": MessageLookupByLibrary.simpleMessage("Pending"),
     "signin": MessageLookupByLibrary.simpleMessage("Sign in"),
   };
