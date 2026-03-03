@@ -12,13 +12,17 @@
     "Emergency": "Emergency Balance",
     "Home": "Home",
     "announcemnts": "Announcemnts",
-    "cancel":"Cancel",
-    "Confirm":"Confirm",
-    "outbounders":"Out of Boundaries!",
-    "currentlocationtext":"Add justification for your current location",
-    "alert":"Incomplete working hours !",
-    "justification":"Write your justification here ... ",
-    "Early":"Early Checkout!",
-    "alerthours":"Incomplete working hours !"
-    
+    "cancel": "Cancel",
+    "Confirm": "Confirm",
+    "outbounders": "Out of Boundaries!",
+    "currentlocationtext": "Add justification for your current location",
+    "alert": "Incomplete working hours !",
+    "justification": "Write your justification here ... ",
+    "Early": "Early Checkout!",
+    "alerthours": "Incomplete working hours !",
+    "Notyet": "Not yet",
+    "day": "Days",
+    "annhead": "Asma Hamrawy got promoted to UX Team Lead!",
+    "annmead": "Congratulate Asma Hamrawy for her recent promotion ",
+    "anndate": "17 Monday, February 2025"
 }

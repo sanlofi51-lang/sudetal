@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sudan/generated/l10n.dart';
 
 class AnnouncementsWidget extends StatelessWidget {
   const AnnouncementsWidget({super.key});
@@ -13,22 +14,21 @@ class AnnouncementsWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Asma Hamrawy got promoted to UX Team Lead!",
+              S.of(context).annhead,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
 
             SizedBox(height: 16),
 
             Text(
-              "Congratulate Asma Hamrawy for her recent promotion "
-              "from Senior UX Designer to UX Team Lead.",
+              S.of(context).annmead,
               style: TextStyle(fontSize: 16, color: Colors.black87),
             ),
 
             SizedBox(height: 14),
 
             Text(
-              "17 Monday, February 2025",
+              S.of(context).anndate,
               style: TextStyle(fontSize: 13, color: Colors.grey),
             ),
           ],

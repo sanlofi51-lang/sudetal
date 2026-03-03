@@ -116,7 +116,7 @@ class _HomeState extends State<Home> {
                             SizedBox(width: 10),
                             CardRec(
                               title: S.of(context).Checkout,
-                              time: "Not yet",
+                              time: S.of(context).Notyet,
                               status: S.of(context).pending,
                               color: Colors.orange,
                             ),

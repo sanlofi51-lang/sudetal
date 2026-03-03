@@ -31,10 +31,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "Hello": MessageLookupByLibrary.simpleMessage("Hello Ali!"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
     "Language": MessageLookupByLibrary.simpleMessage("Language"),
+    "Notyet": MessageLookupByLibrary.simpleMessage("Not yet"),
     "Regular": MessageLookupByLibrary.simpleMessage("Regular Balance"),
     "alert": MessageLookupByLibrary.simpleMessage("Incomplete working hours !"),
     "alerthours": MessageLookupByLibrary.simpleMessage(
       "Incomplete working hours !",
+    ),
+    "anndate": MessageLookupByLibrary.simpleMessage("17 Monday, February 2025"),
+    "annhead": MessageLookupByLibrary.simpleMessage(
+      "Asma Hamrawy got promoted to UX Team Lead!",
+    ),
+    "annmead": MessageLookupByLibrary.simpleMessage(
+      "Congratulate Asma Hamrawy for her recent promotion ",
     ),
     "announcemnts": MessageLookupByLibrary.simpleMessage("Announcemnts"),
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -42,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "currentlocationtext": MessageLookupByLibrary.simpleMessage(
       "Add justification for your current location",
     ),
+    "day": MessageLookupByLibrary.simpleMessage("Days"),
     "justification": MessageLookupByLibrary.simpleMessage(
       "Write your justification here ... ",
     ),

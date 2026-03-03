@@ -198,6 +198,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Not yet`
+  String get Notyet {
+    return Intl.message('Not yet', name: 'Notyet', desc: '', args: []);
+  }
+
+  /// `Days`
+  String get day {
+    return Intl.message('Days', name: 'day', desc: '', args: []);
+  }
+
+  /// `Asma Hamrawy got promoted to UX Team Lead!`
+  String get annhead {
+    return Intl.message(
+      'Asma Hamrawy got promoted to UX Team Lead!',
+      name: 'annhead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulate Asma Hamrawy for her recent promotion `
+  String get annmead {
+    return Intl.message(
+      'Congratulate Asma Hamrawy for her recent promotion ',
+      name: 'annmead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `17 Monday, February 2025`
+  String get anndate {
+    return Intl.message(
+      '17 Monday, February 2025',
+      name: 'anndate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
