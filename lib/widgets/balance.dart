@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sudan/generated/l10n.dart';
 
 class Balance extends StatelessWidget {
   Balance({super.key, required this.title, required this.value});
@@ -12,7 +13,7 @@ class Balance extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-         boxShadow: [
+          boxShadow: [
             BoxShadow(
               // ignore: deprecated_member_use
               color: Colors.black.withOpacity(0.2),
@@ -20,7 +21,7 @@ class Balance extends StatelessWidget {
               blurRadius: 10,
               offset: Offset(0, 5),
             ),
-          ], 
+          ],
           color: const Color.fromARGB(255, 255, 255, 255),
           borderRadius: BorderRadius.circular(16),
         ),
@@ -33,7 +34,7 @@ class Balance extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              "$value Days",
+              "$value" " ${S.of(context).day}",
               style: GoogleFonts.ptSans(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
