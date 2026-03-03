@@ -4,9 +4,8 @@ import 'package:sudan/generated/l10n.dart';
 
 import 'package:sudan/widgets/Anccounemnts.dart';
 
-import 'package:sudan/widgets/home.dart';
 import 'package:hugeicons/hugeicons.dart';
-
+import 'package:sudan/widgets/homestander.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,10 +17,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var checkvalue = true;
   String showButton = '';
-  Widget currentScreen = Home();
+  Widget currentScreen = Homestander();
   void changeScreen(bool value) {
     if (value) {
-      currentScreen = Home();
+      currentScreen = Homestander();
       showButton = 'np';
     } else {
       currentScreen = AnnouncementsPage();
@@ -34,23 +33,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            height: 180,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
-            ),
+          SizedBox(
+            height: 300,
+
             child: Stack(
+              alignment: AlignmentGeometry.topCenter,
               fit: StackFit.expand,
               children: [
-                ClipRRect(
-                  borderRadius: const BorderRadius.vertical(
-                    bottom: Radius.circular(30),
-                  ),
-                  child: Image.asset(
-                    "assets/images/background.jpg",
-                    fit: BoxFit.cover,
-                    alignment: Alignment.topLeft,
-                  ),
+                Image.asset(
+                  height: double.infinity,
+                  "assets/images/background.jpg",
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topLeft,
                 ),
 
                 Container(
@@ -69,11 +63,13 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                Center(
+                Container(
+                 
+                  padding: EdgeInsets.only(bottom: 150),
                   child: Image.asset(
+                    alignment: AlignmentGeometry.topCenter,
                     "assets/images/studal.png",
-                    height: 100,
-                    width: 100,
+                    
                   ),
                 ),
               ],
@@ -88,9 +84,9 @@ class _HomePageState extends State<HomePage> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: const Color.fromARGB(192, 0, 0, 0),
-                    blurRadius: 18,
-                    spreadRadius: 3,
+                    color: Colors.black.withOpacity(0.06),
+                    blurRadius: 8,
+                    offset: Offset(0, 2),
                   ),
                 ],
               ),
@@ -113,10 +109,11 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: Container(
         height: 100,
-        width: 100,
-        margin: EdgeInsets.all(20),
+
+        margin: EdgeInsets.all(10),
         //alignment: Alignment.topLeft,
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.only(bottom: 1, left: 6, top: 1, right: 6),
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(40),
@@ -140,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 12),
+                  padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
@@ -177,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 12),
+                  padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: !checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)

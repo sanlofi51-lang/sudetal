@@ -24,11 +24,9 @@ class CardRec extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              // ignore: deprecated_member_use
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 10,
-              offset: Offset(0, 5),
+              color: Colors.black.withOpacity(0.06),
+              blurRadius: 8,
+              offset: Offset(0, 2),
             ),
           ],
         ),
@@ -52,7 +50,7 @@ class CardRec extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
                 // ignore: deprecated_member_use
-                color:color.withOpacity(0.1),
+                color: color.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Row(
@@ -64,7 +62,7 @@ class CardRec extends StatelessWidget {
                     color: color,
                     fontWeight: FontWeight.w400,
                   ),
-                  SizedBox(width: 3,),
+                  SizedBox(width: 3),
                   Text(
                     status,
                     style: GoogleFonts.openSans(

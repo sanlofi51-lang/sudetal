@@ -11,13 +11,13 @@ class AnnouncementsPage extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.only(top: 150),
+          padding: const EdgeInsets.only(top: 140),
           child: Column(
             children: [
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 235, 232, 232),
+                  color: Color.fromARGB(245, 250, 251, 251),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Column(
@@ -35,6 +35,7 @@ class AnnouncementsPage extends StatelessWidget {
                         const SizedBox(width: 12),
                       ],
                     ),
+                    SizedBox(height: 20,),
 
                     Container(
                       width: double.infinity,

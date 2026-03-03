@@ -15,14 +15,12 @@ class Balance extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              // ignore: deprecated_member_use
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 10,
-              offset: Offset(0, 5),
+              color: Colors.black.withOpacity(0.06),
+              blurRadius: 8,
+              offset: Offset(0, 2),
             ),
           ],
-          color: const Color.fromARGB(255, 255, 255, 255),
+          color: Colors.white,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -34,7 +32,8 @@ class Balance extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              "$value" " ${S.of(context).day}",
+              "$value"
+              " ${S.of(context).day}",
               style: GoogleFonts.ptSans(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
