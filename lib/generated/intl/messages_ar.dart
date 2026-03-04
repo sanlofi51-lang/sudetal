@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Emergency": MessageLookupByLibrary.simpleMessage("رصيد الطوارئ"),
     "Hello": MessageLookupByLibrary.simpleMessage("مرحباً علي!"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
-    "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
+    "Language": MessageLookupByLibrary.simpleMessage("ألعربيه"),
     "Notyet": MessageLookupByLibrary.simpleMessage("ليس بعد"),
     "Regular": MessageLookupByLibrary.simpleMessage("الرصيد العادي"),
     "alert": MessageLookupByLibrary.simpleMessage("ساعات العمل غير مكتملة!"),

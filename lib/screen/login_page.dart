@@ -47,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    Image.asset(_flagCurrent, height: 40, width: 40),
                     TextButton(
                       onPressed: () {
                         final localeProvider = Provider.of<LocaleProvider>(
@@ -72,11 +73,11 @@ class _LoginPageState extends State<LoginPage> {
                         S.of(context).Language,
                         style: GoogleFonts.openSans(
                           color: Colors.white,
+                       
                           fontSize: 20,
                         ),
                       ),
                     ),
-                    Image.asset(_flagCurrent, height: 32, width: 32),
                   ],
                 ),
 
@@ -105,7 +106,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   child: ElevatedButton(
-
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -113,7 +113,6 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
                       shape: RoundedRectangleBorder(

@@ -54,9 +54,9 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Language`
+  /// `English`
   String get Language {
-    return Intl.message('Language', name: 'Language', desc: '', args: []);
+    return Intl.message('English', name: 'Language', desc: '', args: []);
   }
 
   /// `Sign in`

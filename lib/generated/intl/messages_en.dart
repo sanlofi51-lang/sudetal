@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Emergency": MessageLookupByLibrary.simpleMessage("Emergency Balance"),
     "Hello": MessageLookupByLibrary.simpleMessage("Hello Ali!"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
-    "Language": MessageLookupByLibrary.simpleMessage("Language"),
+    "Language": MessageLookupByLibrary.simpleMessage("English"),
     "Notyet": MessageLookupByLibrary.simpleMessage("Not yet"),
     "Regular": MessageLookupByLibrary.simpleMessage("Regular Balance"),
     "alert": MessageLookupByLibrary.simpleMessage("Incomplete working hours !"),
