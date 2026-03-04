@@ -91,6 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Spacer(),
 
                 Container(
+                  margin: EdgeInsets.only(bottom: 30),
                   width: double.infinity,
                   height: 51,
                   decoration: BoxDecoration(
@@ -104,37 +105,15 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   child: ElevatedButton(
+
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomePage()),
                       );
-                      // Navigator.of(context).push(
-                      //   PageRouteBuilder(
-                      //     transitionDuration: const Duration(milliseconds: 400),
-                      //     pageBuilder:
-                      //         (context, animation, secondaryAnimation) =>
-                      //             const HomePage(),
-                      //     transitionsBuilder:
-                      //         (context, animation, secondaryAnimation, child) {
-                      //           const begin = Offset(1.0, 0.0); // from right
-                      //           const end = Offset.zero;
-                      //           const curve = Curves.easeInOut;
-
-                      //           var tween = Tween(
-                      //             begin: begin,
-                      //             end: end,
-                      //           ).chain(CurveTween(curve: curve));
-
-                      //           return SlideTransition(
-                      //             position: animation.drive(tween),
-                      //             child: child,
-                      //           );
-                      //         },
-                      //   ),
-                      // );
                     },
                     style: ElevatedButton.styleFrom(
+
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
                       shape: RoundedRectangleBorder(
