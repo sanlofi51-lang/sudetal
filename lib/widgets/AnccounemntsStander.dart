@@ -40,6 +40,7 @@ class AnnouncementsPageStander extends StatelessWidget {
               ),
 
               Expanded(
+                
                 child: ListView.builder(
                   padding: const EdgeInsets.all(12),
                   itemCount: 5,
