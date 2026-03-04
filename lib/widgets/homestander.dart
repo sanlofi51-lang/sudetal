@@ -11,6 +11,7 @@ class Homestander extends StatelessWidget {
   const Homestander({super.key});
   @override
   Widget build(context) {
+    
     bool isArabic() {
       return Intl.getCurrentLocale() == "ar";
     }
@@ -36,7 +37,7 @@ class Homestander extends StatelessWidget {
               padding: const EdgeInsets.all(12),
 
               decoration: BoxDecoration(
-                color: const Color.fromARGB(245, 250, 251, 251),
+                color: const Color.fromARGB(255, 250, 251, 255),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
@@ -100,7 +101,7 @@ class Homestander extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sudan/generated/l10n.dart';
-
-import 'package:sudan/widgets/Anccounemnts.dart';
-
 import 'package:hugeicons/hugeicons.dart';
+import 'package:sudan/widgets/AnccounemntsStander.dart';
 import 'package:sudan/widgets/homestander.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:sudan/generated/l10n.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -28,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       currentScreen = Homestander();
       showButton = 'np';
     } else {
-      currentScreen = AnnouncementsPage();
+      currentScreen = AnnouncementsPageStander();
       showButton = 'show';
     }
   }
@@ -81,7 +79,7 @@ class _HomePageState extends State<HomePage> {
           currentScreen,
           if (showButton == 'show')
             Container(
-              margin: EdgeInsets.only(top: 80, left: 20,right: 20),
+              margin: EdgeInsets.only(top: 80, left: 20, right: 20),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 248, 247, 247),
                 shape: BoxShape.circle,
