@@ -10,19 +10,22 @@ final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.light,
-    seedColor: const Color.fromARGB(255, 255, 255, 255),
+    seedColor: const Color(0XFF0075C8),
   ),
   textTheme: GoogleFonts.latoTextTheme(),
 );
 
 void main() {
   runApp(
-    ChangeNotifierProvider(create: (_) => LocaleProvider(), child: const App()),
+    ChangeNotifierProvider(
+      create: (_) => LocaleProvider(),
+      child: const Sudatel(),
+    ),
   );
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class Sudatel extends StatelessWidget {
+  const Sudatel({super.key});
 
   @override
   Widget build(BuildContext context) {

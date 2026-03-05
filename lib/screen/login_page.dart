@@ -32,8 +32,7 @@ class _LoginPageState extends State<LoginPage> {
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomLeft,
-                // ignore: deprecated_member_use
-                colors: [Colors.black.withOpacity(0.6), Colors.black],
+                colors: [Colors.black.withValues(alpha: 0.6), Colors.black],
               ),
             ),
           ),

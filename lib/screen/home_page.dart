@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:sudan/widgets/AnccounemntsStander.dart';
+import 'package:sudan/widgets/announcements_page_stander.dart';
 import 'package:sudan/widgets/homestander.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   var checkvalue = true;
   String showButton = '';
   Widget currentScreen = Homestander();
+
   void changeScreen(bool value) {
     if (value) {
       currentScreen = Homestander();
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                       begin: Alignment.bottomLeft,
                       end: Alignment.topLeft,
                       colors: [
-                        Colors.black.withOpacity(0.1),
+                        Colors.black.withValues(alpha: 0.1),
                         const Color.fromARGB(157, 0, 0, 0),
                       ],
                     ),
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.06),
+                    color: Colors.black.withValues(alpha: 0.06),
                     blurRadius: 8,
                     offset: Offset(0, 2),
                   ),
@@ -122,8 +123,7 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              // ignore: deprecated_member_use
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.black.withValues(alpha: 0.3),
               blurRadius: 10,
               offset: Offset(0, 5),
             ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:sudan/generated/l10n.dart';
-import 'package:sudan/widgets/Announcements_widget.dart';
+import 'package:sudan/widgets/announcements_widget.dart';
 import 'package:intl/intl.dart';
 
 class AnnouncementsPageStander extends StatelessWidget {
