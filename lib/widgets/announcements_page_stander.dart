@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:sudan/generated/l10n.dart';
-import 'package:sudan/widgets/announcements_widget.dart';
+import 'package:sudan/widgets/announcements_widgets.dart';
 import 'package:intl/intl.dart';
 
 class AnnouncementsPageStander extends StatelessWidget {
@@ -16,7 +17,7 @@ class AnnouncementsPageStander extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        margin: const EdgeInsets.only(top: 140),
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height / 6.5),
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 250, 251, 255),
           borderRadius: BorderRadius.circular(16),
@@ -33,14 +34,13 @@ class AnnouncementsPageStander extends StatelessWidget {
                 child: Text(
                   S.of(context).announcemnts,
                   style: GoogleFonts.ptSans(
-                    fontSize: 27,
+                    fontSize: 24.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
 
               Expanded(
-                
                 child: ListView.builder(
                   padding: const EdgeInsets.all(12),
                   itemCount: 5,

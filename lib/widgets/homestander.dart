@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:sudan/generated/l10n.dart';
@@ -26,7 +27,7 @@ class Homestander extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(top: 140),
+      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 6.5),
 
       child: SingleChildScrollView(
         physics: ClampingScrollPhysics(),
@@ -44,12 +45,12 @@ class Homestander extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const CircleAvatar(
-                        radius: 24,
+                      CircleAvatar(
+                        radius: 24.r,
 
                         backgroundImage: AssetImage("assets/images/avtar.png"),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: MediaQuery.of(context).size.width / 20),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,14 +58,14 @@ class Homestander extends StatelessWidget {
                             Text(
                               S.of(context).Hello,
                               style: GoogleFonts.ptSans(
-                                fontSize: 18,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
                               S.of(context).Development,
                               style: GoogleFonts.ptSans(
-                                fontSize: 12,
+                                fontSize: 12.sp,
 
                                 color: Colors.grey,
                               ),
@@ -90,7 +91,7 @@ class Homestander extends StatelessWidget {
                             icon: !isArabic()
                                 ? HugeIcons.strokeRoundedLogoutCircle02
                                 : HugeIcons.strokeRoundedLoginCircle02,
-                            size: 30,
+                            size: 30.sp,
                             color: const Color.fromARGB(255, 13, 75, 126),
                           ),
                           onPressed: () {
@@ -100,7 +101,7 @@ class Homestander extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 30),
+                  SizedBox(height: MediaQuery.of(context).size.height / 30),
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
@@ -118,7 +119,7 @@ class Homestander extends StatelessWidget {
                               status: S.of(context).on_time,
                               color: Colors.green,
                             ),
-                            SizedBox(width: 10),
+                            SizedBox(width: 10.h),
                             CardRec(
                               title: S.of(context).Checkout,
                               time: S.of(context).Notyet,
@@ -127,20 +128,24 @@ class Homestander extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height / 30,
+                        ),
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
                             "assets/images/map.png",
-                            height: 250,
+                            height: 150.sp,
                             width: double.infinity,
                             fit: BoxFit.cover,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height / 20,
+                        ),
                         SizedBox(
                           width: double.infinity,
-                          height: 50,
+                          height: MediaQuery.of(context).size.height / 18,
                           child: OutlinedButton(
                             onPressed: checkOut,
                             style: OutlinedButton.styleFrom(
@@ -164,13 +169,13 @@ class Homestander extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 50),
+                  SizedBox(height: MediaQuery.of(context).size.width / 12),
                   Padding(
                     padding: EdgeInsetsGeometry.all(1),
                     child: Row(
                       children: [
                         Balance(title: S.of(context).Regular, value: 11),
-                        SizedBox(width: 10),
+                        SizedBox(width: 10.w),
                         Balance(title: S.of(context).Emergency, value: 5),
                       ],
                     ),

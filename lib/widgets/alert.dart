@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:sudan/generated/l10n.dart';
@@ -14,7 +13,10 @@ class AlertScreen extends StatelessWidget {
     return Dialog(
       backgroundColor: const Color.fromARGB(244, 241, 239, 239),
       alignment: Alignment.center,
-      constraints: BoxConstraints(minHeight: early ? 380 : 230, minWidth: 800),
+      constraints: BoxConstraints(
+        minHeight: early ? 380.h : 230.h,
+        minWidth: 800.h,
+      ),
 
       child: SingleChildScrollView(
         child: ClipRRect(
@@ -24,29 +26,31 @@ class AlertScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20,),
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
 
-               
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      early ? S.of(context).outbounders: S.of(context).alerthours,
+                      early
+                          ? S.of(context).outbounders
+                          : S.of(context).alerthours,
                       style: GoogleFonts.ptSans(
-                        fontSize: 24,
+                        fontSize: 24.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 3),
-                   if(early) Text(
-                         S.of(context).currentlocationtext,
-                      style: GoogleFonts.openSans(
-                        fontSize: 14,
+                    SizedBox(height: 3.h),
+                    if (early)
+                      Text(
+                        S.of(context).currentlocationtext,
+                        style: GoogleFonts.openSans(
+                          fontSize: 14.sp,
 
-                        color: Colors.grey,
+                          color: Colors.grey,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
 
                     if (early)
                       TextField(
@@ -60,34 +64,33 @@ class AlertScreen extends StatelessWidget {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                             gapPadding: 12,
-                            
                           ),
                         ),
                       ),
 
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Row(
                       children: [
                         HugeIcon(
                           icon: HugeIcons.strokeRoundedInformationCircle,
                           color: Color.fromARGB(255, 126, 2, 2),
-                          size: 14,
+                          size: 14.sp,
                         ),
-                        SizedBox(width: 3),
+                        SizedBox(width: 3.h),
                         Text(
                           S.of(context).alerthours,
                           style: GoogleFonts.openSans(
-                            fontSize: 14,
+                            fontSize: 14.sp,
 
                             color: const Color.fromARGB(255, 126, 2, 2),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Container(
                       width: double.infinity,
-                      height: 51,
+                      height: 51.h,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         gradient: const LinearGradient(
@@ -107,16 +110,16 @@ class AlertScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child:  Text(
+                        child: Text(
                           S.of(context).Confirm,
-                          style: TextStyle(fontSize: 18, color: Colors.white),
+                          style: TextStyle(fontSize: 18.sp, color: Colors.white),
                         ),
                       ),
                     ),
-                    SizedBox(height: 5),
+                    SizedBox(height: 5.h),
                     SizedBox(
                       width: double.infinity,
-                      height: 50,
+                      height: 50.h,
                       child: OutlinedButton(
                         onPressed: () {
                           Navigator.pop(context);
@@ -130,7 +133,7 @@ class AlertScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child:  Text(
+                        child: Text(
                           S.of(context).cancel,
                           style: TextStyle(
                             color: Color(0xff1D23D3),

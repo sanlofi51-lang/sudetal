@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sudan/generated/l10n.dart';
 
@@ -28,14 +29,14 @@ class Balance extends StatelessWidget {
           children: [
             Text(
               title,
-              style: GoogleFonts.openSans(fontSize: 12, color: Colors.grey),
+              style: GoogleFonts.openSans(fontSize: 12.sp, color: Colors.grey),
             ),
-            const SizedBox(height: 8),
+             SizedBox(height: 8.h),
             Text(
               "$value"
               " ${S.of(context).day}",
               style: GoogleFonts.ptSans(
-                fontSize: 24,
+                fontSize: 24.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NavBar extends StatefulWidget {
   NavBar({super.key, required this.title, required this.icona,required this.checkitem});
@@ -30,7 +31,7 @@ class _NavBarState extends State<NavBar> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(widget.icona, color: widget.checkitem ? Colors.white : Colors.grey),
-              SizedBox(height: 4),
+              SizedBox(height: 4.h),
               Text(
                 widget.title,
                 style: TextStyle(color: widget.checkitem ? Colors.white : Colors.grey),

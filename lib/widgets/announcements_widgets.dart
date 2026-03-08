@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sudan/generated/l10n.dart';
 
 class AnnouncementsWidget extends StatelessWidget {
@@ -20,8 +21,8 @@ class AnnouncementsWidget extends StatelessWidget {
             children: [
               Text(
                 S.of(context).annhead,
-                style: const TextStyle(
-                  fontSize: 20,
+                style:  TextStyle(
+                  fontSize: 17.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -30,23 +31,23 @@ class AnnouncementsWidget extends StatelessWidget {
 
               Text(
                 S.of(context).annmead,
-                style: const TextStyle(
-                  fontSize: 16,
+                style:  TextStyle(
+                  fontSize: 16.sp,
                   color: Colors.black87,
                 ),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
 
-              const SizedBox(height: 12),
+               SizedBox(height: 12.h),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     S.of(context).anndate,
-                    style: const TextStyle(
-                      fontSize: 13,
+                    style:  TextStyle(
+                      fontSize: 13.sp,
                       color: Colors.grey,
                     ),
                   ),

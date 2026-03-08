@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:sudan/widgets/announcements_page_stander.dart';
 import 'package:sudan/widgets/homestander.dart';
@@ -38,14 +39,13 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           SizedBox(
-            height: 300,
+            height: MediaQuery.of(context).size.height / 6,
 
             child: Stack(
               alignment: AlignmentGeometry.topCenter,
               fit: StackFit.expand,
               children: [
                 Image.asset(
-                  height: double.infinity,
                   "assets/images/background.jpg",
                   fit: BoxFit.cover,
                   alignment: Alignment.topLeft,
@@ -67,12 +67,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                Container(
-                  padding: EdgeInsets.only(bottom: 150),
-                  child: Image.asset(
-                    alignment: AlignmentGeometry.topCenter,
-                    "assets/images/studal.png",
-                  ),
+                Image.asset(
+                  alignment: AlignmentGeometry.topCenter,
+                  height: MediaQuery.sizeOf(context).height / 1,
+                  width: MediaQuery.sizeOf(context).width / 1,
+                  "assets/images/studal.png",
                 ),
               ],
             ),
@@ -98,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   icon: isArabic()
                       ? HugeIcons.strokeRoundedArrowLeft02
                       : HugeIcons.strokeRoundedArrowRight02,
-                  size: 24,
+                  size: 24.sp,
                   color: const Color.fromARGB(255, 13, 75, 126),
                 ),
                 onPressed: () {
@@ -112,7 +111,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: Container(
-        height: 100,
+        height: 105.h,
 
         margin: EdgeInsets.all(10),
         //alignment: Alignment.topLeft,
@@ -130,6 +129,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
               child: GestureDetector(
@@ -140,23 +140,26 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: Container(
+                  height: MediaQuery.of(context).size.height,
+                  // width: MediaQuery.of(context).size.width *1.5,
                   padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
                         : const Color.fromARGB(255, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+
                     children: [
                       HugeIcon(
-                        size: 26,
+                        size: 15.sp,
                         icon: HugeIcons.strokeRoundedHome01,
                         strokeWidth: 2,
                         color: checkvalue ? Colors.white : Colors.grey,
                       ),
-                      SizedBox(height: 4),
+                      SizedBox(height: 1.h),
                       Text(
                         S.of(context).Home,
                         style: GoogleFonts.openSans(
@@ -182,24 +185,24 @@ class _HomePageState extends State<HomePage> {
                     color: !checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
                         : const Color.fromARGB(255, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Stack(
                         children: [
                           HugeIcon(
-                            size: 26,
+                            size: 15.sp,
                             icon: HugeIcons.strokeRoundedMegaphone02,
                             strokeWidth: 2,
                             color: !checkvalue ? Colors.white : Colors.grey,
                           ),
                           if (checkvalue)
                             Container(
-                              padding: EdgeInsets.only(left: 15, bottom: 2),
+                              padding: EdgeInsets.only(left: 13.sp, bottom: 2),
                               child: Icon(
-                                size: 11,
+                                size: 7.sp,
                                 Icons.circle,
                                 color: Colors.orange,
                               ),
@@ -207,7 +210,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
 
-                      SizedBox(height: 4),
+                      SizedBox(height: 1.h),
                       Text(
                         S.of(context).announcemnts,
                         style: GoogleFonts.openSans(

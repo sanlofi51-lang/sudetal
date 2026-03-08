@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CardRec extends StatelessWidget {
@@ -35,17 +36,17 @@ class CardRec extends StatelessWidget {
           children: [
             Text(
               title,
-              style: GoogleFonts.openSans(fontSize: 12, color: Colors.grey),
+              style: GoogleFonts.openSans(fontSize: 12.sp, color: Colors.grey),
             ),
-            const SizedBox(height: 6),
+             SizedBox(height: 6.h),
             Text(
               time,
               style: GoogleFonts.ptSans(
-                fontSize: 24,
+                fontSize: 24.sp,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            const SizedBox(height: 6),
+             SizedBox(height: 6.h),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
@@ -57,16 +58,16 @@ class CardRec extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.circle,
-                    size: 8,
+                    size: 8.sp,
                     color: color,
                     fontWeight: FontWeight.w400,
                   ),
-                  SizedBox(width: 3),
+                  SizedBox(width: 3.h),
                   Text(
                     status,
                     style: GoogleFonts.openSans(
                       color: color,
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
