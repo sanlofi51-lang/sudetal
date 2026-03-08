@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: MediaQuery.of(context).size.height,
                   // width: MediaQuery.of(context).size.width *1.5,
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                //  padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
@@ -180,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                //  padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: !checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)

@@ -90,10 +90,9 @@ class _LoginPageState extends State<LoginPage> {
                     height: 288.h,
                   ),
 
-                  SizedBox(height: MediaQuery.of(context).size.height / 4),
+                  SizedBox(height: MediaQuery.of(context).size.height / 5),
 
                   Container(
-                    margin: EdgeInsets.only(bottom: 30),
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.08,
                     decoration: BoxDecoration(

@@ -46,7 +46,7 @@ class Homestander extends StatelessWidget {
                   Row(
                     children: [
                       CircleAvatar(
-                        radius: 24.r,
+                        radius: 24.sp,
 
                         backgroundImage: AssetImage("assets/images/avtar.png"),
                       ),
