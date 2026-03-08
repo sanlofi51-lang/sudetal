@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: Container(
-        height: 105.h,
+        height: 80.w,
 
         margin: EdgeInsets.all(10),
         //alignment: Alignment.topLeft,
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: MediaQuery.of(context).size.height,
                   // width: MediaQuery.of(context).size.width *1.5,
-                //  padding: EdgeInsets.symmetric(vertical: 20),
+                  //  padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
 
                     children: [
                       HugeIcon(
-                        size: 15.sp,
+                        size: 18.sp,
                         icon: HugeIcons.strokeRoundedHome01,
                         strokeWidth: 2,
                         color: checkvalue ? Colors.white : Colors.grey,
@@ -163,6 +163,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         S.of(context).Home,
                         style: GoogleFonts.openSans(
+                          fontSize: 14.sp,
                           color: checkvalue ? Colors.white : Colors.grey,
                         ),
                       ),
@@ -180,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: Container(
-                //  padding: EdgeInsets.symmetric(vertical: 20),
+                  //  padding: EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                     color: !checkvalue
                         ? Color.fromARGB(255, 3, 35, 212)
@@ -193,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                       Stack(
                         children: [
                           HugeIcon(
-                            size: 15.sp,
+                            size: 18.sp,
                             icon: HugeIcons.strokeRoundedMegaphone02,
                             strokeWidth: 2,
                             color: !checkvalue ? Colors.white : Colors.grey,
@@ -202,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                             Container(
                               padding: EdgeInsets.only(left: 13.sp, bottom: 2),
                               child: Icon(
-                                size: 7.sp,
+                                size: 8.sp,
                                 Icons.circle,
                                 color: Colors.orange,
                               ),
@@ -214,6 +215,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         S.of(context).announcemnts,
                         style: GoogleFonts.openSans(
+                          fontSize: 14.sp,
                           color: !checkvalue ? Colors.white : Colors.grey,
                         ),
                       ),
