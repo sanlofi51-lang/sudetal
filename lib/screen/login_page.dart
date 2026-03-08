@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image.asset(_flagCurrent, height: 40, width: 40),
+                      Image.asset(_flagCurrent, height: 40.h, width: 40.w),
                       TextButton(
                         onPressed: () {
                           final localeProvider = Provider.of<LocaleProvider>(
@@ -86,11 +86,11 @@ class _LoginPageState extends State<LoginPage> {
 
                   Image.asset(
                     "assets/images/studal.png",
-                    width: 288,
-                    height: 288,
+                    width: 288.w,
+                    height: 288.h,
                   ),
 
-                  SizedBox(height: MediaQuery.of(context).size.height / 10),
+                  SizedBox(height: MediaQuery.of(context).size.height / 4),
 
                   Container(
                     margin: EdgeInsets.only(bottom: 30),
